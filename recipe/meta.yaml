@@ -16,7 +16,7 @@ build:
 requirements:
     build:
         - python
-        - setuptools
+        - setuptools <=23
         - numpy x.x
     run:
         - python
@@ -35,7 +35,7 @@ about:
     home: https://github.com/pydata/numexpr
     license: MIT
     license_file: LICENSE.txt
-    summary: Fast numerical expression evaluator for NumPy
+    summary: 'Fast numerical expression evaluator for NumPy.'
     description: |
       Numexpr is a fast numerical expression evaluator for NumPy. With it,
       expressions that operate on arrays (like "3*a+4*b") are accelerated and use
