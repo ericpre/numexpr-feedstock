@@ -10,7 +10,7 @@ source:
     sha256: e92c83d066fa8da63864d69b5f218287cc31437ae844db77390f2183123aab22
 
 build:
-    number: 0
+    number: 1
     script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -47,3 +47,4 @@ extra:
     recipe-maintainers:
         - msarahan
         - ocefpaf
+        - scopatz
