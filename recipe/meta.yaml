@@ -1,48 +1,48 @@
-{% set version="2.6.1" %}
+{% set version="2.6.2" %}
 
 package:
-    name: numexpr
-    version: {{ version }}
+  name: numexpr
+  version: {{ version }}
 
 source:
-    fn: numexpr-{{ version }}.tar.gz
-    url: https://github.com/pydata/numexpr/archive/v{{ version }}.tar.gz
-    sha256: e92c83d066fa8da63864d69b5f218287cc31437ae844db77390f2183123aab22
+  fn: numexpr-{{ version }}.tar.gz
+  url: https://github.com/pydata/numexpr/archive/v{{ version }}.tar.gz
+  sha256: 8c57759bbd64fb81d985e54772191b71e8b63d58843d64933009521d2dddfd2f
 
 build:
-    number: 1
-    script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
-    build:
-        - python
-        - setuptools
-        - numpy x.x
-    run:
-        - python
-        - numpy x.x
+  build:
+    - python
+    - setuptools
+    - numpy x.x
+  run:
+    - python
+    - numpy x.x
 
 test:
-    requires:
-        - setuptools
-    imports:
-        - numexpr
-        - numexpr.interpreter
+  requires:
+    - setuptools
+  imports:
+    - numexpr
+    - numexpr.interpreter
 
 about:
-    home: https://github.com/pydata/numexpr
-    license: MIT
-    license_file: LICENSE.txt
-    summary: 'Fast numerical expression evaluator for NumPy.'
-    description: |
-      Numexpr is a fast numerical expression evaluator for NumPy. With it,
-      expressions that operate on arrays (like "3*a+4*b") are accelerated and use
-      less memory than doing the same calculation in Python.
-    doc_url: https://github.com/pydata/numexpr/wiki/Numexpr-Users-Guide
-    dev_url: https://github.com/pydata/numexpr
+  home: https://github.com/pydata/numexpr
+  license: MIT
+  license_file: LICENSE.txt
+  summary: 'Fast numerical expression evaluator for NumPy.'
+  description: |
+    Numexpr is a fast numerical expression evaluator for NumPy. With it,
+    expressions that operate on arrays (like "3*a+4*b") are accelerated and use
+    less memory than doing the same calculation in Python.
+  doc_url: https://github.com/pydata/numexpr/wiki/Numexpr-Users-Guide
+  dev_url: https://github.com/pydata/numexpr
 
 extra:
-    recipe-maintainers:
-        - msarahan
-        - ocefpaf
-        - scopatz
+  recipe-maintainers:
+    - msarahan
+    - ocefpaf
+    - scopatz
