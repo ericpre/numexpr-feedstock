@@ -28,6 +28,9 @@ test:
   imports:
     - numexpr
     - numexpr.interpreter
+  commands:
+    - conda inspect linkages -p $PREFIX numexpr  # [not win]
+    - conda inspect objects -p $PREFIX numexpr  # [osx]
 
 about:
   home: https://github.com/pydata/numexpr
