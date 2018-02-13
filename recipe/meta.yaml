@@ -9,7 +9,7 @@ source:
   sha256: f0bef9a3a5407fb8d6344cf91b658bef7c13ec8a8eb13f423822d9d2ca5af6ce
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -21,13 +21,12 @@ requirements:
     - numpy 1.11.*  # [win and py36]
   run:
     - python
+    - setuptools
     - numpy >=1.8  # [not (win and (py35 or py36))]
     - numpy >=1.9  # [win and py35]
     - numpy >=1.11  # [win and py36]
 
 test:
-  requires:
-    - setuptools
   imports:
     - numexpr
     - numexpr.interpreter
@@ -52,3 +51,4 @@ extra:
     - msarahan
     - ocefpaf
     - scopatz
+    - djkirkham
