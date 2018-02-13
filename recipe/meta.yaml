@@ -9,31 +9,26 @@ source:
   sha256: f0bef9a3a5407fb8d6344cf91b658bef7c13ec8a8eb13f423822d9d2ca5af6ce
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
-    - numpy 1.8.*  # [not (win and (py35 or py36))]
-    - numpy 1.9.*  # [win and py35]
-    - numpy 1.11.*  # [win and py36]
+    - pip
+    - numpy 1.11.*
   run:
     - python
-    - numpy >=1.8  # [not (win and (py35 or py36))]
-    - numpy >=1.9  # [win and py35]
-    - numpy >=1.11  # [win and py36]
+    - setuptools
+    - numpy >=1.11
 
 test:
-  requires:
-    - setuptools
   imports:
     - numexpr
     - numexpr.interpreter
   commands:
-    - conda inspect linkages -p $PREFIX numexpr  # [not win]
-    - conda inspect objects -p $PREFIX numexpr  # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://github.com/pydata/numexpr
@@ -52,3 +47,4 @@ extra:
     - msarahan
     - ocefpaf
     - scopatz
+    - djkirkham
