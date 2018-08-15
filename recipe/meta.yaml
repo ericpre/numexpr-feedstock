@@ -9,18 +9,21 @@ source:
   sha256: 97c1f7fa409439ae933494014cd41d43de84cfe6c98b7f93392f94d54de1b453
 
 build:
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
+    - {{ compiler('c') }}
+
+  host:
     - python
     - pip
-    - numpy 1.11.*
+    - numpy 1.11.3
   run:
     - python
     - setuptools
-    - numpy >=1.11
+    - numpy >=1.11.3
 
 test:
   imports:
@@ -48,3 +51,4 @@ extra:
     - ocefpaf
     - scopatz
     - djkirkham
+    - jjhelmus
