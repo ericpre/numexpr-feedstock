@@ -7,6 +7,10 @@ package:
 source:
   url: https://pypi.io/packages/source/n/numexpr/numexpr-{{ version }}.tar.gz
   sha256: ee8bc7201aa2f1962c67d27c326a11eef9df887d7b87b1278a1d4e722bf44375
+  patches:
+    # https://github.com/pydata/numexpr/pull/316
+    # merged upstream and can be dropped next release.
+    - backport_316.patch
 
 build:
   number: 1000
