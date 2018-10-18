@@ -1,4 +1,4 @@
-{% set version = "2.6.6" %}
+{% set version = "2.6.8" %}
 
 package:
   name: numexpr
@@ -6,32 +6,34 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/numexpr/numexpr-{{ version }}.tar.gz
-  sha256: 97c1f7fa409439ae933494014cd41d43de84cfe6c98b7f93392f94d54de1b453
+  sha256: ee8bc7201aa2f1962c67d27c326a11eef9df887d7b87b1278a1d4e722bf44375
+  patches:
+    # https://github.com/pydata/numexpr/pull/316
+    # merged upstream and can be dropped next release.
+    - backport_316.patch
 
 build:
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1000
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
 
 requirements:
   build:
     - {{ compiler('c') }}
-
+    - {{ compiler('cxx') }}
   host:
     - python
     - pip
-    - numpy 1.11.3
+    - numpy  # [not win]
+    - numpy 1.14.*  # [win]
   run:
     - python
     - setuptools
-    - numpy >=1.11.3
+    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
     - numexpr
     - numexpr.interpreter
-  commands:
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://github.com/pydata/numexpr
