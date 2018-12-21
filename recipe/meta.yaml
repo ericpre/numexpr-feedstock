@@ -1,4 +1,4 @@
-{% set version = "2.6.8" %}
+{% set version = "2.6.9" %}
 
 package:
   name: numexpr
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/numexpr/numexpr-{{ version }}.tar.gz
-  sha256: ee8bc7201aa2f1962c67d27c326a11eef9df887d7b87b1278a1d4e722bf44375
+  sha256: fc218b777cdbb14fa8cff8f28175ee631bacabbdd41ca34e061325b6c44a6fa6
   patches:
     # https://github.com/pydata/numexpr/pull/316
     # merged upstream and can be dropped next release.
