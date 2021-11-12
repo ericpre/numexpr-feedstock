@@ -1,0 +1,3 @@
+mkl_support: # [linux64]
+  - nomkl    # [linux64]
+  - mkl      # [linux64]
