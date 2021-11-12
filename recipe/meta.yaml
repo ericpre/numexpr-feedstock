@@ -2,8 +2,8 @@
 {% set build = 2 %}
 {% set build_string = '' %}
 
-{% set build_string = 'mkl_' %}              # [linux64 and mkl_support == 'mkl']
-{% set build = build + 100 %}                # [linux64 and mkl_support == 'mkl']
+{% set build_string = 'mkl_' %}              # [(linux64 or win) and mkl_support == 'mkl']
+{% set build = build + 100 %}                # [(linux64 or win) and mkl_support == 'mkl']
 
 package:
   name: numexpr
@@ -25,15 +25,15 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - mkl                                    # [linux64 and mkl_support == 'mkl']
-    - mkl-devel                              # [linux64 and mkl_support == 'mkl']
+    - mkl                                    # [(linux64 or win) and mkl_support == 'mkl']
+    - mkl-devel                              # [(linux64 or win) and mkl_support == 'mkl']
     - numpy
     - pip
     - python
     - setuptools
   run:
-    - libblas * *mkl                         # [linux64 and mkl_support == 'mkl']
-    - mkl                                    # [linux64 and mkl_support == 'mkl']
+    - libblas * *mkl                         # [(linux64 or win) and mkl_support == 'mkl']
+    - mkl                                    # [(linux64 or win) and mkl_support == 'mkl']
     - {{ pin_compatible('numpy') }}
     - python
 
