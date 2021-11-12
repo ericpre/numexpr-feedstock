@@ -1,4 +1,12 @@
 {% set version = "2.7.3" %}
+{% set build = 2 %}
+
+{% if mkl_support == 'mkl' %}
+{% set build_string = 'mkl_' %}
+{% set build = build + 100 %}
+{% else %}
+{% set build_string = '' %}
+{% endif %}
 
 package:
   name: numexpr
@@ -9,7 +17,8 @@ source:
   sha256: 43616529f9b7d1afc83386f943dc66c4da5e052f00217ba7e3ad8dd1b5f3a825
 
 build:
-  number: 2
+  string: "{{ build_string }}py{{ py }}h{{ PKG_HASH }}_{{ build }}"
+  number: {{ build }}
 
 requirements:
   build:
@@ -19,14 +28,17 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - python
-    - pip
+    - mkl                                    # [mkl_support == 'mkl']
+    - mkl-devel                              # [mkl_support == 'mkl']
     - numpy
-    - mkl-devel
-  run:
+    - pip
     - python
     - setuptools
+  run:
+    - libblas * *mkl                         # [mkl_support == 'mkl']
+    - mkl                                    # [mkl_support == 'mkl']
     - {{ pin_compatible('numpy') }}
+    - python
 
 test:
   imports:
