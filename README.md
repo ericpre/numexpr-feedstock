@@ -232,38 +232,73 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_numpy1.18python3.7.____cpython</td>
+              <td>win_64_mkl_supportmklnumpy1.18python3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=702&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_numpy1.18python3.7.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_mkl_supportmklnumpy1.18python3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_numpy1.18python3.8.____cpython</td>
+              <td>win_64_mkl_supportmklnumpy1.18python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=702&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_numpy1.18python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_mkl_supportmklnumpy1.18python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_numpy1.19python3.7.____73_pypy</td>
+              <td>win_64_mkl_supportmklnumpy1.19python3.7.____73_pypy</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=702&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_numpy1.19python3.7.____73_pypy" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_mkl_supportmklnumpy1.19python3.7.____73_pypy" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_numpy1.19python3.9.____cpython</td>
+              <td>win_64_mkl_supportmklnumpy1.19python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=702&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_numpy1.19python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_mkl_supportmklnumpy1.19python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_numpy1.21python3.10.____cpython</td>
+              <td>win_64_mkl_supportmklnumpy1.21python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=702&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_numpy1.21python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_mkl_supportmklnumpy1.21python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_mkl_supportnomklnumpy1.18python3.7.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=702&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_mkl_supportnomklnumpy1.18python3.7.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_mkl_supportnomklnumpy1.18python3.8.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=702&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_mkl_supportnomklnumpy1.18python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_mkl_supportnomklnumpy1.19python3.7.____73_pypy</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=702&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_mkl_supportnomklnumpy1.19python3.7.____73_pypy" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_mkl_supportnomklnumpy1.19python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=702&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_mkl_supportnomklnumpy1.19python3.9.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_mkl_supportnomklnumpy1.21python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=702&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/numexpr-feedstock?branchName=master&jobName=win&configuration=win_64_mkl_supportnomklnumpy1.21python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr>
