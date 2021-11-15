@@ -16,6 +16,8 @@ source:
 build:
   string: "{{ build_string }}py{{ py }}h{{ PKG_HASH }}_{{ build }}"
   number: {{ build }}
+  track_features:
+    - numexpr_mkl    # [linux64 and mkl_support == 'mkl']
 
 requirements:
   build:
@@ -34,6 +36,7 @@ requirements:
   run:
     - libblas * *mkl                         # [linux64 and mkl_support == 'mkl']
     - mkl                                    # [linux64 and mkl_support == 'mkl']
+    - nomkl                                  # [linux64 and mkl_support != 'mkl']
     - {{ pin_compatible('numpy') }}
     - python
 
