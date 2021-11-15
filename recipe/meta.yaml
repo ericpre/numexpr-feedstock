@@ -3,7 +3,7 @@
 {% set build_string = '' %}
 
 {% set build_string = 'mkl_' %}              # [linux64 and mkl_support == 'mkl']
-{% set build = build + 100 %}                # [linux64 and mkl_support == 'mkl']
+{% set build = build + 100 %}                # [linux64 and mkl_support != 'mkl']
 
 package:
   name: numexpr
