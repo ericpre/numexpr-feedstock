@@ -16,8 +16,10 @@ source:
 build:
   string: "{{ build_string }}py{{ py }}h{{ PKG_HASH }}_{{ build }}"
   number: {{ build }}
+  script: bash {{ RECIPE_DIR }}/build_without_mkl.sh  # [unix and not (linux64 and mkl_support == 'mkl')]
+  script: bash {{ RECIPE_DIR }}/build_with_mkl.sh     # [linux64 and mkl_support == 'mkl']
   track_features:
-    - numexpr_mkl    # [(linux64 or win64) and mkl_support == 'mkl']
+    - numexpr_mkl                            # [(linux64 or win64) and mkl_support == 'mkl']
 
 requirements:
   build:
