@@ -6,6 +6,12 @@ channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2017
+mkl:
+- '2021'
+mkl_devel:
+- '2021'
+mkl_support:
+- mkl
 numpy:
 - '1.21'
 pin_run_as_build:
