@@ -7,9 +7,9 @@ channel_targets:
 cxx_compiler:
 - vs2017
 mkl:
-- '2021'
+- '2022'
 mkl_devel:
-- '2021'
+- '2022'
 mkl_support:
 - nomkl
 numpy:
