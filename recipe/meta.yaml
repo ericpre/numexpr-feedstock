@@ -41,8 +41,9 @@ requirements:
     - nomkl                                  # [(linux64 or win64) and mkl_support != 'mkl']
     - {{ pin_compatible('numpy') }}
     - python
-    # Remove in next release > 2.8.0
-    - setuptools
+    # Remove in next release > 2.8.3
+    # https://github.com/pydata/numexpr/pull/416
+    - packaging
 
 test:
   imports:
