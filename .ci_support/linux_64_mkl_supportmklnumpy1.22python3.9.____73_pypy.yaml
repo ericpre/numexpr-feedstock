@@ -14,6 +14,12 @@ cxx_compiler_version:
 - '12'
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
+mkl:
+- '2022'
+mkl_devel:
+- '2022'
+mkl_support:
+- mkl
 numpy:
 - '1.22'
 pin_run_as_build:
