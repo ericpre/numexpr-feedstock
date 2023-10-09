@@ -1,0 +1,9 @@
+mkl_support: # [linux64 or win64]
+  - nomkl    # [linux64 or win64]
+  - mkl      # [linux64 or win64]
+
+mkl:         # [win64]
+  - 2022.1.0 # [win64]
+
+mkl_devel:   # [win64]
+  - 2022.1.0 # [win64]
