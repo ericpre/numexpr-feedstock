@@ -1,22 +1,27 @@
 c_compiler:
 - vs2019
 channel_sources:
-- conda-forge/label/python_rc,conda-forge
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2019
+mkl:
+- 2022.1.0
+mkl_devel:
+- 2022.1.0
+mkl_support:
+- mkl
 numpy:
-- '1.26'
+- '1.22'
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.12.* *_cpython
+- 3.9.* *_73_pypy
 target_platform:
 - win-64
 zip_keys:
 - - python
   - numpy
-  - channel_sources
